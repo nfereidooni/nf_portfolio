@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niki Fereidooni - Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script>
+		function validateForm() {
+		var name =  document.getElementById('name').value;
+		if (name == "") {
+			document.querySelector('.status').innerHTML = "Name cannot be empty.";
+			return false;
+		}
+		var email =  document.getElementById('email').value;
+		if (email == "") {
+			document.querySelector('.status').innerHTML = "Email cannot be empty.";
+			return false;
+		} else {
+			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if(!re.test(email)){
+				document.querySelector('.status').innerHTML = "Email format invalid.";
+				return false;
+			}
+		}
+		var message =  document.getElementById('message').value;
+		if (message == "") {
+			document.querySelector('.status').innerHTML = "Message cannot be empty.";
+			return false;
+		}
+		document.querySelector('.status').innerHTML = "Sending...";
+		}
+	</script>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="#">Niki Fereidooni</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">About</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+<!-- Main Content -->
+
+    <div class="main">
+		<div class="row">
+
+			<div class="col-1"></div>
+
+				<div class="col-10">
+
+					<h1><b>Contact</b></h1>
+					
+						<form id="contact-form" name="contact=form" action="mail.php" method="POST">
+						<div class="form-group row">
+							<label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">Name</label>
+							<div class="col-11">
+								<input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Full Name">
+							</div>
+							</div>
+						<div class="form-group row">
+							<label for="colFormLabel" class="col-sm-2 col-form-label-lg">Email</label>
+							<div class="col-11">
+								<input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="name@example.com">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Message</label>
+							<div class="col-11 message">
+								<textarea type="text" class="form-control form-control-lg" id="message" name="message" row="5" placeholder="Type your message here..."></textarea>
+							</div>
+						</div>
+						</form>
+						<button type="submit" class="btn btn-danger" onclick="validateForm();">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+	<div class="col-1"></div>
+	<div class="col-7">
+		<div class="status"></div>
+	</div>
+	</div>
+
+<!-- Footer -->
+
+    <footer>
+        <div class="row bg-danger justify-content-center">
+
+            <p>&#169; Copyright 2020, Site created by Niki Fereidooni</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

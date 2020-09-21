@@ -1,0 +1,66 @@
+
+body {
+    background-image: url('img_girl.jpg');
+  }
+
+.navbar-brand {
+    font-size: 35px;
+    margin-left: 30px;
+}
+
+.navbar-nav {
+    font-size: 25px; 
+    margin-right: 30px;  
+}
+
+.main {
+    margin-top: 100px;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: firebrick;
+
+}
+
+.headshot {
+    max-width: 250px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+
+}
+
+.image350 {
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.media-body p {
+    padding-top: 5px;
+    font-size: 20px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .media-p1 {
+      margin-top: 270px;
+    }
+  }
+
+.status {
+    padding-top: 10px;
+    color: red;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 15px;
+}
