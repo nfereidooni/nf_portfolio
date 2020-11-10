@@ -32,8 +32,12 @@ h1 {
 
 }
 
-.card {
-    margin: 10px;
+.portfolioContainer {
+    margin-left: 40px;
+}
+
+#portfolioCard {
+    margin: 20px;
 }
 
 .media-body p {
